@@ -11,5 +11,10 @@ pipeline {
         pwd()
       }
     }
+    stage('mail') {
+      steps {
+        mail(subject: 'testing from jenkins', body: 'sarasa sarasa', to: 'enrique.conci@hdmz.com', from: 'enrique.conci@hdmz.com')
+      }
+    }
   }
 }
